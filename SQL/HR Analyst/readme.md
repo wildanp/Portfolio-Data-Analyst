@@ -1,4 +1,5 @@
 Dalam proyek ini, saya menganalisis dataset HR untuk menjawab pertanyaan penting seperti:
+
 ✔️ Berapa jumlah karyawan aktif saat ini?
 ✔️ Bagaimana tren turnover karyawan dari tahun ke tahun?
 ✔️ Bagaimana distribusi gender dan komposisi per departemen?
