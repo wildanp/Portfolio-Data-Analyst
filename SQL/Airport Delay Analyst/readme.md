@@ -28,18 +28,28 @@ Proyek ini menganalisis data keterlambatan kedatangan pesawat di bandara-bandara
 ## ❓ Pertanyaan yang Dijawab dengan SQL
 
 1. Bandara mana dengan rata-rata keterlambatan kedatangan tertinggi?
+
 SELECT 
+
     airport,
+    
     airport_name,
+    
     COUNT(*) AS total_flights,
+    
     SUM(arr_delay) AS total_arr_delay,
+    
     ROUND(AVG(arr_delay), 2) AS avg_arr_delay
+    
 FROM airport_delay ad 
+
 GROUP BY airport, airport_name
+
 ORDER BY avg_arr_delay DESC
+
 LIMIT 10;
 
-2. Berapa persen kontribusi setiap jenis keterlambatan di tiap bandara?
+3. Berapa persen kontribusi setiap jenis keterlambatan di tiap bandara?
 SELECT 
     airport,
     airport_name,
@@ -53,7 +63,7 @@ GROUP BY airport, airport_name
 ORDER BY late_aircraft_delay_pct DESC
 LIMIT 10;
 
-3. Rata-rata keterlambatan per bulan untuk tiap maskapai
+4. Rata-rata keterlambatan per bulan untuk tiap maskapai
 SELECT 
     carrier,
     carrier_name,
@@ -63,7 +73,7 @@ FROM airport_delay ad
 GROUP BY carrier, carrier_name, month
 ORDER BY carrier, month;
 
-4. Negara bagian dengan keterlambatan terburuk
+5. Negara bagian dengan keterlambatan terburuk
 SELECT 
     state,
     ROUND(AVG(arr_delay), 2) AS avg_arr_delay,
@@ -74,7 +84,7 @@ HAVING COUNT(*) > 100 -- Filter untuk cukup data
 ORDER BY avg_arr_delay DESC
 LIMIT 5;
 
-5. Perbandingan delay karena cuaca vs faktor lain
+6. Perbandingan delay karena cuaca vs faktor lain
 SELECT 
     SUM(weather_delay) AS total_weather_delay,
     SUM(arr_delay - weather_delay) AS total_other_delays,
