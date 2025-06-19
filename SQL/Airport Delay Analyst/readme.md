@@ -49,6 +49,7 @@ ORDER BY avg_arr_delay DESC
 
 LIMIT 10;
 
+
 2. Berapa persen kontribusi setiap jenis keterlambatan di tiap bandara?
 
 SELECT 
@@ -75,6 +76,7 @@ ORDER BY late_aircraft_delay_pct DESC
 
 LIMIT 10;
 
+
 3. Rata-rata keterlambatan per bulan untuk tiap maskapai
 
 SELECT 
@@ -92,6 +94,7 @@ FROM airport_delay ad
 GROUP BY carrier, carrier_name, month
 
 ORDER BY carrier, month;
+
 
 4. Negara bagian dengan keterlambatan terburuk
 
@@ -113,6 +116,7 @@ ORDER BY avg_arr_delay DESC
 
 LIMIT 5;
 
+
 5. Perbandingan delay karena cuaca vs faktor lain
 
 SELECT 
@@ -124,6 +128,7 @@ SELECT
     ROUND(SUM(weather_delay)*100.0 / NULLIF(SUM(arr_delay), 0), 2) AS weather_delay_pct
 
 FROM airport_delay ad ;
+
 
 📌 Insight Utama
 
