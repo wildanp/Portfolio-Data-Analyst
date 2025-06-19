@@ -26,6 +26,7 @@ Proyek ini menganalisis data keterlambatan kedatangan pesawat di bandara-bandara
 ---
 
 ## ❓ Pertanyaan yang Dijawab dengan SQL
+
 1. Bandara mana dengan rata-rata keterlambatan kedatangan tertinggi?
 SELECT 
     airport,
