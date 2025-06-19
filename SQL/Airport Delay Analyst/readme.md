@@ -50,7 +50,7 @@ ORDER BY avg_arr_delay DESC
 LIMIT 10;
 
 
-2. Berapa persen kontribusi setiap jenis keterlambatan di tiap bandara?
+### 2. Berapa persen kontribusi setiap jenis keterlambatan di tiap bandara?
 
 SELECT 
 
@@ -77,7 +77,7 @@ ORDER BY late_aircraft_delay_pct DESC
 LIMIT 10;
 
 
-3. Rata-rata keterlambatan per bulan untuk tiap maskapai
+### 3. Rata-rata keterlambatan per bulan untuk tiap maskapai
 
 SELECT 
 
@@ -96,7 +96,7 @@ GROUP BY carrier, carrier_name, month
 ORDER BY carrier, month;
 
 
-4. Negara bagian dengan keterlambatan terburuk
+### 4. Negara bagian dengan keterlambatan terburuk
 
 SELECT 
 
@@ -117,7 +117,7 @@ ORDER BY avg_arr_delay DESC
 LIMIT 5;
 
 
-5. Perbandingan delay karena cuaca vs faktor lain
+### 5. Perbandingan delay karena cuaca vs faktor lain
 
 SELECT 
     
@@ -130,7 +130,7 @@ SELECT
 FROM airport_delay ad ;
 
 
-📌 Insight Utama
+## 📌 Insight Utama
 
 1.Beberapa maskapai memiliki rata-rata delay tertinggi selama musim panas (Juni–Agustus).
 
